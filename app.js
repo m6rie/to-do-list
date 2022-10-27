@@ -14,16 +14,19 @@ const today = new Date()
 const now = new Date
 headerDate.innerHTML = new Intl.DateTimeFormat('en-GB', { dateStyle: 'full' }).format(today);
 
-
 window.addEventListener("load", function(ev) {
   todos = JSON.parse(this.localStorage.getItem("todos")) || [] // will return an empty array if JSON.parse doesn't find the data
   const toDoForm = document.querySelector("#To-Do-Container__form")
 
   // CREATE
   toDoForm.addEventListener("submit", function(ev){
-    // tells the browser to not proceed as normal if the event is not handled
-    ev.preventDefault()
 
+    // if the user tries to add an empty task the page throw an alert
+    const userInpt = document.querySelector("#To-Do-Container__form--input")
+
+    if(userInpt.value === ""){
+      alert("Please enter a task")
+    } else {
     // my task object (task, its status, and date it was created)
     const todo = {
       forminput: ev.target.elements.forminput.value,
@@ -40,6 +43,10 @@ window.addEventListener("load", function(ev) {
     ev.target.reset()
 
     displayToDos()
+
+        // tells the browser to not proceed as normal if the event is not handled
+        ev.preventDefault()
+  }
   })
   displayToDos()
 })
