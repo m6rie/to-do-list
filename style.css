@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #EEE5D3;
+  /* color: #241a07; */
+  color: #2C2311;
+  font-family: 'Josefin Sans', sans-serif;
+  @apply p-5
+}
+
+
+.dark-mode {
+  background-color: #1e1009f1;
+  color: #EEE5D3;
+  @apply border-white !important
+}
+
+.Header {
+  @apply grid grid-cols-12 justify-items-stretch
+}
+
+.Header__dark-mode {
+  @apply col-start-7 col-span-3 text-sm
+}
+
+.Header__title {
+  font-size: 50px;
+  font-weight: 700;
+  @apply lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-6 sm:col-start-1 sm:col-span-12 justify-self-center pt-5
+}
+
+.Header__date {
+  @apply col-start-5 col-span-4 justify-self-center text-sm
+}
+
+.Header__switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  @apply col-start-6 justify-self-center
+}
+
+.Header__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Header__switch__slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Header__switch__slider::before{
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Header__switch input:checked + .Header__switch__slider {
+  background-color: #2196F3;
+}
+
+.Header__switch input:focus + .Header__switch__slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.Header__switch input:checked + .Header__switch__slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#To-Do-Container__form {
+  @apply grid grid-cols-11 pt-6
+}
+
+input {
+  outline-width: 0;
+}
+
+#To-Do-Container__form--input {
+  color: #467e0a;
+  background-color: transparent;
+  @apply border-black border-b-2 col-start-4 col-span-2 px-2
+}
+
+#To-Do-Container__form--submit {
+  background-color: #52960a;
+  @apply col-span-2 col-start-7 p-2 rounded-xl font-semibold
+}
+
+#To-Do-Container__form--submit:hover {
+  background-color: #81d02d;
+}
+
+.To-Do-Container__list {
+  @apply grid grid-cols-11 pt-20
+}
+
+.To-Do-Container__list--title {
+  @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+}
+
+.To-Do-Container__list--list-item {
+  @apply col-start-4 col-span-5 grid grid-cols-12 bg-white p-2 my-2 rounded-xl
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.To-Do-Container__list--list-item--checkbox {
+  cursor: pointer;
+  accent-color: #52960a;
+}
+
+.To-Do-Container__list--list-item--item {
+  color: black;
+  background-color: transparent;
+  /* resize: horizontal; */
+  overflow: hidden;
+  width: 100%;
+  /* line-break: auto; */
+  @apply col-start-2 col-span-6 px-2
+}
+
+.To-Do-Container__list--list-item--item:active {
+  width: auto;
+}
+
+.To-Do-Container__list--list-item--item:focus {
+  min-width: 200px;
+}
+
+.To-Do-Container__list--list-item--actions {
+  grid-column: col-start 10 / span 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: black !important;
+  @apply col-start-10
+}

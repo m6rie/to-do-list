@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/203bddeb95.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./tailwind/output.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="Header">
+    <label class="Header__switch">
+      <input type="checkbox">
+      <span class="Header__switch__slider"></span>
+    </label>
+    <p class="Header__dark-mode">Dark mode</p>
+    <h1 class="Header__title">TO DO LIST</h1>
+    <p class="Header__date"></p>
+  </header>
+
+  <main class="To-Do-Container">
+    <section class="To-Do-Container__form">
+      <form id="To-Do-Container__form">
+        <input type="text" id="To-Do-Container__form--input" name="forminput" placeholder="Write your task here">
+        <input type="submit" value="Add the task" id="To-Do-Container__form--submit">
+      </form>
+    </section>
+
+    <section class="To-Do-Container__list">
+      <!-- <h3 class="To-Do-Container__list--title">
+        My To Dos
+      </h3> -->
+
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
