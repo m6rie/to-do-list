@@ -17,22 +17,208 @@ body {
   @apply border-white !important
 }
 
-.Header {
-  @apply grid grid-cols-12 justify-items-stretch
+@media screen and (min-width:335px) {
+  .Header__dark-mode {
+    @apply col-start-7 col-span-3 text-sm
+  }
+
+  .Header__title {
+    font-size: 40px !important;
+    @apply col-start-1 col-span-12 justify-self-center pt-5
+  }
+
+  .Header__date {
+    @apply col-start-1 col-span-12 justify-self-center text-sm
+  }
+
+  .Header__switch {
+    @apply col-start-5 justify-self-center
+  }
+
+  #To-Do-Container__form {
+    @apply grid grid-cols-12 pt-6
+  }
+
+  #To-Do-Container__form--input {
+    @apply border-black border-b-2 col-start-2 col-span-10 px-2
+  }
+
+  #To-Do-Container__form--submit {
+    @apply col-span-5 col-start-5 p-2 rounded-xl font-medium m-2
+  }
+
+  .To-Do-Container__list {
+    @apply grid grid-cols-12 pt-14
+  }
+
+  .To-Do-Container__list--title {
+    @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+  }
+
+  .To-Do-Container__list--list-item {
+    @apply col-start-1 col-span-12 grid grid-cols-12 bg-white p-2 my-2 rounded-xl
+  }
+
+  .To-Do-Container__list--list-item--item {
+    width: 100%;
+    @apply col-start-2 col-span-6 px-2
+  }
+
+  .To-Do-Container__list--list-item--item:active {
+    width: auto;
+  }
+
+  .To-Do-Container__list--list-item--item:focus {
+    min-width: 200px;
+  }
+
+  .To-Do-Container__list--list-item--actions {
+    grid-column: col-start 10 / span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @apply col-start-11
+  }
 }
 
-.Header__dark-mode {
-  @apply col-start-7 col-span-3 text-sm
+@media screen and (min-width:520px) {
+  .Header__dark-mode {
+    @apply col-start-7 col-span-3 text-sm
+  }
+
+  .Header__title {
+    font-size: 50px !important;
+    @apply col-start-2 col-span-10 justify-self-center pt-5
+  }
+
+  .Header__date {
+    @apply col-start-4 col-span-6 justify-self-center text-sm
+  }
+
+  .Header__switch {
+    @apply col-start-5 justify-self-center
+  }
+
+  #To-Do-Container__form {
+    @apply grid grid-cols-12 pt-6
+  }
+
+  #To-Do-Container__form--input {
+    @apply border-black border-b-2 col-start-3 col-span-4 px-2
+  }
+
+  #To-Do-Container__form--submit {
+    @apply col-span-3 col-start-8 p-2 rounded-xl font-semibold
+  }
+
+  .To-Do-Container__list {
+    @apply grid grid-cols-11 pt-20
+  }
+
+  .To-Do-Container__list--title {
+    @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+  }
+
+  .To-Do-Container__list--list-item {
+    @apply col-start-3 col-span-7 grid grid-cols-12 bg-white p-2 my-2 rounded-xl
+  }
+
+  .To-Do-Container__list--list-item--item {
+    width: 100%;
+    @apply col-start-2 col-span-6 px-2
+  }
+
+  .To-Do-Container__list--list-item--item:active {
+    width: auto;
+  }
+
+  .To-Do-Container__list--list-item--item:focus {
+    min-width: 200px;
+  }
+
+  .To-Do-Container__list--list-item--actions {
+    grid-column: col-start 11 / span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @apply col-start-11
+  }
+}
+
+
+@media screen and (max-width:334px) {
+  .Header__dark-mode {
+    @apply col-start-7 col-span-5 text-sm
+  }
+
+  .Header__title {
+    font-size: 30px !important;
+    @apply col-start-1 col-span-12 justify-self-center pt-5
+  }
+
+  .Header__date {
+    @apply col-start-1 col-span-12 justify-self-center text-sm
+  }
+
+  .Header__switch {
+    @apply col-start-4 justify-self-center
+  }
+
+  #To-Do-Container__form {
+    @apply grid grid-cols-12 pt-6
+  }
+
+  #To-Do-Container__form--input {
+    @apply border-black border-b-2 col-start-3 col-span-8 px-2
+  }
+
+  #To-Do-Container__form--submit {
+    @apply col-span-6 col-start-4 p-1 rounded-xl font-normal my-3
+  }
+
+  .To-Do-Container__list {
+    @apply grid grid-cols-12 pt-20
+  }
+
+  .To-Do-Container__list--title {
+    @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+  }
+
+  .To-Do-Container__list--list-item {
+    @apply col-start-1 col-span-12 grid grid-cols-12 bg-white p-2 my-2 rounded-xl
+  }
+
+  .To-Do-Container__list--list-item--item {
+    width: 100%;
+    @apply col-start-2 col-span-6 px-2
+  }
+
+  .To-Do-Container__list--list-item--item:active {
+    width: auto;
+  }
+
+  .To-Do-Container__list--list-item--item:focus {
+    min-width: 200px;
+  }
+
+  .To-Do-Container__list--list-item--actions {
+    grid-column: col-start 9 / span 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: black !important;
+    @apply col-start-9
+  }
+
+}
+
+.Header {
+  @apply grid grid-cols-12 justify-items-stretch
 }
 
 .Header__title {
   font-size: 50px;
   font-weight: 700;
-  @apply lg:col-start-5 lg:col-span-4 md:col-start-4 md:col-span-6 sm:col-start-1 sm:col-span-12 justify-self-center pt-5
-}
-
-.Header__date {
-  @apply col-start-5 col-span-4 justify-self-center text-sm
 }
 
 .Header__switch {
@@ -40,7 +226,6 @@ body {
   display: inline-block;
   width: 50px;
   height: 20px;
-  @apply col-start-6 justify-self-center
 }
 
 .Header__switch input {
@@ -89,39 +274,21 @@ body {
   transform: translateX(26px);
 }
 
-#To-Do-Container__form {
-  @apply grid grid-cols-11 pt-6
-}
-
 input {
   outline-width: 0;
-}
-
-#To-Do-Container__form--input {
-  color: #467e0a;
-  background-color: transparent;
-  @apply border-black border-b-2 col-start-4 col-span-2 px-2
-}
-
-#To-Do-Container__form--submit {
-  background-color: #52960a;
-  @apply col-span-2 col-start-7 p-2 rounded-xl font-semibold
 }
 
 #To-Do-Container__form--submit:hover {
   background-color: #81d02d;
 }
 
-.To-Do-Container__list {
-  @apply grid grid-cols-11 pt-20
+#To-Do-Container__form--input {
+  color: #467e0a;
+  background-color: transparent;
 }
 
-.To-Do-Container__list--title {
-  @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
-}
-
-.To-Do-Container__list--list-item {
-  @apply col-start-4 col-span-5 grid grid-cols-12 bg-white p-2 my-2 rounded-xl
+#To-Do-Container__form--submit {
+  background-color: #52960a;
 }
 
 .done {
@@ -140,22 +307,20 @@ input {
   overflow: hidden;
   width: 100%;
   /* line-break: auto; */
-  @apply col-start-2 col-span-6 px-2
 }
 
 .To-Do-Container__list--list-item--item:active {
   width: auto;
 }
 
-.To-Do-Container__list--list-item--item:focus {
-  min-width: 200px;
-}
-
 .To-Do-Container__list--list-item--actions {
-  grid-column: col-start 10 / span 4;
+  /* grid-column: col-start 10 / span 4; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   color: black !important;
-  @apply col-start-10
+}
+
+.To-Do-Container__list--list-item--actions img {
+  width: 20px;
 }

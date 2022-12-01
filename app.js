@@ -78,8 +78,8 @@ function displayToDos() {
     deleteBtn.classList.add("To-Do-Container__list--list-item--actions--delete")
 
     itemDiv.innerHTML = `<input type="text" value="${todo.forminput}" readonly>`
-    editBtn.innerHTML = "Edit"
-    deleteBtn.innerHTML = "Delete"
+    editBtn.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ_CRMxPAGEZjoE2qnd5Hc4dxxE1-mIJTuULJbQa3dN_PgoXK5z">`
+    deleteBtn.innerHTML = `<img src="https://static.vecteezy.com/system/resources/previews/007/873/345/original/trash-can-icon-logo-illustration-suitable-for-web-design-logo-application-free-vector.jpg">`
 
     checkboxLabel.appendChild(checkboxItem)
     actionsDiv.appendChild(editBtn)
@@ -96,16 +96,19 @@ function displayToDos() {
       todo.done = e.target.checked
       localStorage.setItem("todos", JSON.stringify(todos))
 
+      // generating a global variable 'item'
+      item = itemDiv.querySelector("input")
+
       if(todo.done) {
-        itemDiv.classList.add("done")
+        item.classList.add("done")
       } else {
-        itemDiv.classList.remove("done")
+        item.classList.remove("done")
       }
     })
 
     // UPDATE
     editBtn.addEventListener("click", function(e){
-      const item = itemDiv.querySelector("input")
+      item = itemDiv.querySelector("input")
       item.removeAttribute("readonly")
       item.focus()
 
@@ -119,9 +122,11 @@ function displayToDos() {
 
     // DELETE
     deleteBtn.addEventListener("click", function(e){
-      todos = todos.filter(td => td != todo)
-      localStorage.setItem("todos", JSON.stringify(todos))
-      displayToDos()
+      if(confirm("Are you sure you want to delete this task?")) {
+        todos = todos.filter(td => td != todo)
+        localStorage.setItem("todos", JSON.stringify(todos))
+        displayToDos()
+      }
     })
   })
 }
