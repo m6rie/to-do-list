@@ -21,6 +21,9 @@ window.addEventListener("load", function(ev) {
   // CREATE
   toDoForm.addEventListener("submit", function(ev){
 
+
+
+
     // if the user tries to add an empty task the page throw an alert
     const userInpt = document.querySelector("#To-Do-Container__form--input")
 
@@ -55,6 +58,19 @@ window.addEventListener("load", function(ev) {
 function displayToDos() {
   const completeList = document.querySelector(".To-Do-Container__list")
   completeList.innerHTML = ""
+
+  const listTitle = document.createElement("h3")
+  listTitle.classList.add("To-Do-Container__list--title")
+  listTitle.innerHTML = `My List`
+  completeList.appendChild(listTitle)
+
+  // removing the title if the list is empty
+  if(todos == "") {
+    listTitle.classList.add("hidden")
+  } else {
+    listTitle.classList.remove("hidden")
+  }
+
 
   todos.forEach(todo => {
     // updating the DOM by adding elements and styling when a new task is created

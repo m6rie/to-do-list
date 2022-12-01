@@ -44,15 +44,15 @@ body {
   }
 
   #To-Do-Container__form--submit {
-    @apply col-span-5 col-start-5 p-2 rounded-xl font-medium m-2
+    @apply col-span-4 col-start-5 p-2 rounded-xl font-medium m-2 justify-self-center
   }
 
   .To-Do-Container__list {
-    @apply grid grid-cols-12 pt-14
+    @apply grid grid-cols-12 pt-8
   }
 
   .To-Do-Container__list--title {
-    @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+    @apply col-start-4 col-span-6 text-3xl pb-5 justify-self-center
   }
 
   .To-Do-Container__list--list-item {
@@ -116,7 +116,7 @@ body {
   }
 
   .To-Do-Container__list--title {
-    @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+    @apply col-start-3 col-span-7 text-3xl pb-5 justify-self-center
   }
 
   .To-Do-Container__list--list-item {
@@ -177,11 +177,11 @@ body {
   }
 
   .To-Do-Container__list {
-    @apply grid grid-cols-12 pt-20
+    @apply grid grid-cols-12 pt-10
   }
 
   .To-Do-Container__list--title {
-    @apply col-start-5 col-span-3 text-3xl pb-5 justify-self-center
+    @apply col-start-2 col-span-10 text-3xl pb-5 justify-self-center
   }
 
   .To-Do-Container__list--list-item {
@@ -323,4 +323,8 @@ input {
 
 .To-Do-Container__list--list-item--actions img {
   width: 20px;
+}
+
+.hidden {
+  visibility: hidden;
 }
